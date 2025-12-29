@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Réserver - MARIA RESTAURANT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">LE GOURMET</a>
+            <nav class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="menu.html">Menu</a>
+                <a href="reservation.html" class="active">Réserver</a>
+            </nav>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <section class="reservation-page section-padding">
+        <div class="container">
+            <div class="reservation-wrapper">
+                
+                <div class="reservation-info">
+                    <h2>Réservez votre table</h2>
+                    <p>Pour toute demande spécifique ou groupe de plus de 8 personnes, merci de nous contacter directement.</p>
+                    <div class="contact-details">
+                        <p>📞 01 23 45 67 89</p>
+                        <p>📧 reservation@legourmet.com</p>
+                    </div>
+                </div>
+
+                <form id="bookingForm" class="reservation-form">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" required placeholder="Votre nom">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" required placeholder="06...">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required placeholder="votre@email.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Heure</label>
+                            <select id="time" required>
+                                <option value="" disabled selected>Choisir l'heure</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Nombre de personnes</label>
+                        <select id="guests" required>
+                            <option value="1">1 Personne</option>
+                            <option value="2" selected>2 Personnes</option>
+                            <option value="3">3 Personnes</option>
+                            <option value="4">4 Personnes</option>
+                            <option value="5">5 Personnes</option>
+                            <option value="6">6 Personnes</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Demandes spéciales (Allergies, anniversaire...)</label>
+                        <textarea id="notes" rows="3" placeholder="Dites-nous tout..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width">Confirmer la réservation</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Merci !</h3>
+            <p>Votre demande de réservation a bien été reçue. Vous recevrez un email de confirmation sous peu.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

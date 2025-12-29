@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander en ligne - MARIA FUNZULE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark">
+
+    <header class="navbar scrolled"> <div class="container nav-container">
+            <a href="index.html" class="logo">MARIA FUNZULE</a>
+            <nav class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="menu.html">Menu</a>
+                <a href="commander.html" class="active">Commander</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="order-section section-padding">
+        <div class="container order-grid">
+            
+            <div class="order-menu">
+                <h2 class="section-title">Sélectionnez vos plats</h2>
+                
+                <div class="order-category">
+                    <h3>Entrées</h3>
+                    <div class="order-item" data-id="1" data-name="Velouté de Cèpes" data-price="18">
+                        <div class="item-details">
+                            <h4>Velouté de Cèpes</h4>
+                            <p>Émulsion à la truffe blanche.</p>
+                            <span class="price">18€</span>
+                        </div>
+                        <button class="add-to-cart">Ajouter +</button>
+                    </div>
+
+                    <div class="order-item" data-id="2" data-name="Foie Gras" data-price="26">
+                        <div class="item-details">
+                            <h4>Foie Gras Maison</h4>
+                            <p>Chutney de figues et brioche.</p>
+                            <span class="price">26€</span>
+                        </div>
+                        <button class="add-to-cart">Ajouter +</button>
+                    </div>
+                </div>
+
+                <div class="order-category">
+                    <h3>Plats</h3>
+                    <div class="order-item" data-id="3" data-name="Filet de Bœuf" data-price="45">
+                        <div class="item-details">
+                            <h4>Filet de Bœuf Rossini</h4>
+                            <p>Foie gras poêlé et sauce périgourdine.</p>
+                            <span class="price">45€</span>
+                        </div>
+                        <button class="add-to-cart">Ajouter +</button>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="order-sidebar">
+                <div class="cart-container">
+                    <h3>Votre Panier</h3>
+                    <div id="cart-items">
+                        <p class="empty-msg">Votre panier est vide</p>
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <div class="summary-line">
+                            <span>Sous-total</span>
+                            <span id="subtotal">0€</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Livraison</span>
+                            <span id="delivery">Gratuit</span>
+                        </div>
+                        <div class="summary-line total">
+                            <span>Total</span>
+                            <span id="total-price">0€</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary full-width" id="checkout-btn" disabled>Passer au paiement</button>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
