@@ -23,6 +23,13 @@ body {
     line-height: 1.6;
 }
 
+/* Ensure images never overflow their containers */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Typography */
 h1,
 h2,
@@ -221,19 +228,50 @@ h2 {
 /* Responsive */
 @media (max-width: 768px) {
 
+    /* Hide full link lists on small screens; switch nav to column layout */
     .nav-links,
     .nav-actions {
         display: none;
     }
 
-    /* Mobile menu logic needed in JS */
-    h1 {
-        font-size: 2.5rem;
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
-    .grid-2 {
-        grid-template-columns: 1fr;
+    .logo {
+        font-size: 1.25rem;
     }
+
+    /* Typography scaling for mobile */
+    h1 { font-size: 2rem; line-height: 1.1; }
+    h2 { font-size: 1.75rem; }
+
+    /* Ensure grid layouts stack into a single column */
+    .grid-2,
+    .grid-3,
+    .order-grid,
+    .reservation-wrapper {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Make dish images fluid on mobile and remove fixed height */
+    .dish-card img { height: auto; }
+
+    /* Ensure order sidebar (cart) becomes static so it appears after items */
+    .order-sidebar { position: static !important; }
+
+    /* Container side padding so text doesn't touch screen edge */
+    .container { padding: 0 20px; }
+
+    /* Form rows and other two-column helpers should collapse */
+    .form-row { grid-template-columns: 1fr; }
+
+    /* Small adjustments to spacing for tight screens */
+    .section-padding { padding: 40px 0; }
+    .menu-grid { gap: 24px; }
 }
 /* --- Styles Spécifiques Page Menu --- */
 
